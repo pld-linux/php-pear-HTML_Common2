@@ -33,7 +33,7 @@ In PEAR status of this package is: %{_status}.
 %description -l pl
 Pakiet HTML_Common2 zawiera metody do wy¶wietlania kodu HTML i obróbki
 atrybutów.
-- Metdody do ustawiania, usuwania i aktualizacji atrybutów HTML,
+- Metody do ustawiania, usuwania i aktualizacji atrybutów HTML,
 - Obs³uguje komentarze w kodzie HTML,
 - Obs³uguje opcje globalne dokumentu (kodowanie, znaki koñca linii i
   wciêcia),
