@@ -4,8 +4,8 @@
 %define		_status		devel
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - Abstract base class for HTML classes (PHP5 port of HTML_Common package)
-Summary(pl):	%{_pearname} - Podstawowa klasa dla klas HTML (port pakietu HTML_Common do PHP5)
+Summary:	%{_pearname} - abstract base class for HTML classes (PHP5 port of HTML_Common package)
+Summary(pl):	%{_pearname} - podstawowa klasa dla klas HTML (port pakietu HTML_Common dla PHP5)
 Name:		php-pear-%{_pearname}
 Version:	0.1.0
 Release:	1
