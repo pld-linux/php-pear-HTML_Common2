@@ -13,19 +13,19 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	f6f3df17ae2c7236b8e4d1391d2a24e3
-URL:		http://pear.php.net/package/Class_Subclass/
+URL:		http://pear.php.net/package/HTML_Common2/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
-Requires:	php-pear
+Requires:	php-pear >= 3:5.0.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The HTML_Common2 package provides methods for HTML code display and
 attributes handling.
-- Methods to set, remove, update html attributes.
+- Methods to set, remove, update HTML attributes,
 - Handles comments in HTML code.
 - Handles global document options (encoding, linebreak and indentation
-  characters).
+  characters),
 - Handles indentation for nicer HTML code.
 
 In PEAR status of this package is: %{_status}.
@@ -33,10 +33,10 @@ In PEAR status of this package is: %{_status}.
 %description -l pl
 Pakiet HTML_Common2 zawiera metody do wy¶wietlania kodu HTML i obróbki
 atrybutów.
-- Metdody do ustawiania, usuwania i aktualizacji atrybutów html.
-- Obs³uguje komentarze w kodzie HTML.
+- Metdody do ustawiania, usuwania i aktualizacji atrybutów HTML,
+- Obs³uguje komentarze w kodzie HTML,
 - Obs³uguje opcje globalne dokumentu (kodowanie, znaki koñca linii i
-  wciêcia).
+  wciêcia),
 - Obs³uguje wciêcia dla ³adniejszego wygl±du kodu HTML.
 
 Ta klasa ma w PEAR status: %{_status}.
