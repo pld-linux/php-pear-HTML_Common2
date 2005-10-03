@@ -15,6 +15,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	f6f3df17ae2c7236b8e4d1391d2a24e3
 URL:		http://pear.php.net/package/HTML_Common2/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common >= 3:5.0.0
 Requires:	php-pear >= 3:5.0.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
