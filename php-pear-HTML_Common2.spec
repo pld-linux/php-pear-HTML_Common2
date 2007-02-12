@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - abstract base class for HTML classes (PHP5 port of HTML_Common package)
-Summary(pl):	%{_pearname} - podstawowa klasa dla klas HTML (port pakietu HTML_Common dla PHP5)
+Summary(pl.UTF-8):   %{_pearname} - podstawowa klasa dla klas HTML (port pakietu HTML_Common dla PHP5)
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
 Release:	1
@@ -33,20 +33,20 @@ attributes handling.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Pakiet HTML_Common2 zawiera metody do wy¶wietlania kodu HTML i obróbki
-atrybutów.
-- Metody do ustawiania, usuwania i aktualizacji atrybutów HTML,
-- Obs³uguje komentarze w kodzie HTML,
-- Obs³uguje opcje globalne dokumentu (kodowanie, znaki koñca linii i
-  wciêcia),
-- Obs³uguje wciêcia dla ³adniejszego wygl±du kodu HTML.
+%description -l pl.UTF-8
+Pakiet HTML_Common2 zawiera metody do wyÅ›wietlania kodu HTML i obrÃ³bki
+atrybutÃ³w.
+- Metody do ustawiania, usuwania i aktualizacji atrybutÃ³w HTML,
+- ObsÅ‚uguje komentarze w kodzie HTML,
+- ObsÅ‚uguje opcje globalne dokumentu (kodowanie, znaki koÅ„ca linii i
+  wciÄ™cia),
+- ObsÅ‚uguje wciÄ™cia dla Å‚adniejszego wyglÄ…du kodu HTML.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
@@ -55,7 +55,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
