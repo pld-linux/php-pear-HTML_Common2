@@ -1,18 +1,19 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		HTML
 %define		_subclass	Common2
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
+%define		subver	RC1
+%define		rel		1
 Summary:	%{_pearname} - abstract base class for HTML classes (PHP5 port of HTML_Common package)
 Summary(pl.UTF-8):	%{_pearname} - podstawowa klasa dla klas HTML (port pakietu HTML_Common dla PHP5)
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
-Release:	2
+Version:	2.0.0
+Release:	0.%{subver}.%{rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	757cf3879b3a6e4750728206e4c37070
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
+# Source0-md5:	4b5c216ccc365471e0235eb8d69cecbc
 URL:		http://pear.php.net/package/HTML_Common2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -49,8 +50,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
