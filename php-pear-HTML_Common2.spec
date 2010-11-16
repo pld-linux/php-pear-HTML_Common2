@@ -1,25 +1,22 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		HTML
-%define		_subclass	Common2
-%define		_status		beta
-%define		_pearname	%{_class}_%{_subclass}
-%define		subver	RC1
-%define		rel		1
+%define		_status		stable
+%define		_pearname	HTML_Common2
 Summary:	%{_pearname} - abstract base class for HTML classes (PHP5 port of HTML_Common package)
 Summary(pl.UTF-8):	%{_pearname} - podstawowa klasa dla klas HTML (port pakietu HTML_Common dla PHP5)
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-Release:	1.%{subver}.%{rel}
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
-# Source0-md5:	4b5c216ccc365471e0235eb8d69cecbc
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	cd4a6ed84ac10c10f747b772b13bbc62
 URL:		http://pear.php.net/package/HTML_Common2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:5.0.0
 Requires:	php-pear >= 3:5.0.0
+Obsoletes:	php-pear-HTML_Common2-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,20 +42,6 @@ atrybutów.
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 
@@ -67,6 +50,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
 
+# tests should not be packaged
+%{__rm} -r $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -74,8 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
+%{php_pear_dir}/HTML/*.php
