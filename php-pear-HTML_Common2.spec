@@ -5,7 +5,7 @@ Summary:	%{_pearname} - abstract base class for HTML classes (PHP5 port of HTML_
 Summary(pl.UTF-8):	%{_pearname} - podstawowa klasa dla klas HTML (port pakietu HTML_Common dla PHP5)
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -14,7 +14,7 @@ URL:		http://pear.php.net/package/HTML_Common2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-common >= 3:5.0.0
+Requires:	php(core) >= 5.0.0
 Requires:	php-pear >= 3:5.0.0
 Obsoletes:	php-pear-HTML_Common2-tests
 BuildArch:	noarch
