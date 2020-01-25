@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_status		stable
 %define		_pearname	HTML_Common2
 Summary:	%{_pearname} - abstract base class for HTML classes (PHP5 port of HTML_Common package)
